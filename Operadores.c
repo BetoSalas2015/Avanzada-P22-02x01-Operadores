@@ -68,6 +68,58 @@ int main()
 	b = +3;
 	PRINT2(d, a, b);
 	PRINT2(+d, a, b);
+
+	// operador complemento a 1 ( ~ ) 
+	a = 7;
+	PRINT2(d, a, ~a);
+
+	// Operador incremento ( ++ ) y decremento ( -- ) en uno
+	a = 10;
+	a++;
+	PRINT1(d, a);
+	a = 10;
+	a--;
+	PRINT1(d, a);
+	a = 10;
+	++a;
+	PRINT1(d, a);
+	a = 10;
+	--a;
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a++);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, ++a);
+	PRINT1(d, a);
+
+	a = 10;
+	b = 10;
+	PRINT1(d, a++ + b); 
+	PRINT2(d, a, b);
+
+	a = 10;
+	b = 10;
+	PRINT1(d, a++ + ++b); 
+	PRINT2(d, a, b);
+
+	a = 5; b = 8; c = 0;
+	d = a++ + b-- + !c;
+	PRINT1(d, d);
+	PRINT4(d, a,b,c,d);
 	
+	// Operador "Tamaño de..." ( sizeof )
+	printf("El tamaño de del tipo char es %d bytes.\n", sizeof(char));
+	printf("El tamaño de del tipo int es %d bytes.\n", sizeof(int));
+	printf("El tamaño de del tipo float es %d bytes.\n", sizeof(float));
+	printf("El tamaño de del tipo double es %d bytes.\n", sizeof(double));
+	printf("El tamaño de del arreglo es %d bytes.\n", sizeof(arreglo));
+	printf("El tamaño de del arreglo[5] es %d bytes.\n", sizeof(arreglo[5]));
+	printf("El tamaño de la struct Persona es %d bytes.\n", sizeof(struct Persona));
+	printf("El tamaño de la variable Juanito es %d bytes.\n", sizeof(juanito));
+	printf("El tamaño de del apuntador ptrJuanito es %d bytes.\n", sizeof(ptrJuanito));
+
 	system("pause");
 }
