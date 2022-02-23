@@ -44,8 +44,8 @@ int main()
 	//  Jerarquía nivel 2 - Operadores Unarios
 
 	// Operador negación lógica ( ! )
-	a = 'a';
-	if( "" ) 
+	a = 0;
+	if( a ) 
 		PR(s, "verdadero");
 	else
 		PR(s, "falso" );
@@ -55,6 +55,19 @@ int main()
 		PR(s, "verdadero");
 	else
 		PR(s, "falso" );
+	NL;
 
+	a = 0;
+	PRINT1(d, a);
+	PRINT1(d, !a);
+	PRINT1(d, !!a);
+	PRINT1(d, !!!!!!!!!!!!!a);
+
+	//  Operadores Mas unario ( + ) y Menos unario ( - )
+	a = -3;
+	b = +3;
+	PRINT2(d, a, b);
+	PRINT2(+d, a, b);
+	
 	system("pause");
 }
