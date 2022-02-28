@@ -121,5 +121,48 @@ int main()
 	printf("El tamaño de la variable Juanito es %d bytes.\n", sizeof(juanito));
 	printf("El tamaño de del apuntador ptrJuanito es %d bytes.\n", sizeof(ptrJuanito));
 
+	//  Operador direccion (de memoria) de... ( & ) - unario
+	
+	a = 50;
+	ptr = &a;		//  LA dirección de memoria de a
+	PRINT1(p, &a);
+	PRINT1(p, ptr);
+
+	juanito.edad = 25;				//  Acceder a los campos de una estructura
+	ptrJuanito = &juanito;
+	PRINT1(p, &juanito);
+	PRINT1(p, ptrJuanito);
+
+	// Operador indirección ( Contenido de la dirección...) ( * )
+
+	PRINT1(d, *ptr);
+	PRINT1(d, juanito.edad);
+	PRINT1(d, ptrJuanito->edad);
+
+	a = 10;
+	ptr = &a;
+	PRINT1(d, ++(*ptr));
+
+	// Operador Cast (Convertir...) ( (tipo Dato) )
+	
+	//  Promoción de tipos: char -> int -> float -> double
+	car = 'H';
+	a = car;
+	e = a;
+	h = e;
+
+	// degradación de tipos: double -> float - int -> char
+	h = 3.1415924585;
+	e = h;
+	a = e;
+	car = a;
+
+	//  CAsting: Conversión de tipos:
+	car = 'h';
+	a = (int) car;
+	e = (float) a;
+	h = (double) e;
+
+
 	system("pause");
 }
