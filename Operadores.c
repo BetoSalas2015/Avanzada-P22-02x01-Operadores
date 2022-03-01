@@ -39,7 +39,7 @@ void primarios()
 	ptrJuanito = &juanito;
 	ptrJuanito->edad = 26;
 }
-int main()
+void unarios() 
 {
 	//  Jerarquía nivel 2 - Operadores Unarios
 
@@ -157,12 +157,93 @@ int main()
 	a = e;
 	car = a;
 
-	//  CAsting: Conversión de tipos:
+	//  Casting: Conversión de tipos:
 	car = 'h';
 	a = (int) car;
 	e = (float) a;
 	h = (double) e;
 
+	PRINT1(d, 5 / 2);
+	PRINT1(f,  5 / (float) 2);
+
+}
+void multiplicativos() 
+{
+	//  Jerarquía nivel 3 - Operadores Multiplicativos
+	//  Operadir multiplicación ( * ) -  Binario
+	PRINT1(d, 5 * 3);
+
+	//  Operador división ( / ) 
+	PRINT1(d, 5 / 2);		// División entera: Entero / entero  = Entero
+	PRINT1(f, 5.0 / 2);		// División flotante
+	PRINT1(f, 5 / 2.0 );
+	PRINT1(f, 5.0 / 2.0 );
+
+	// Operador Módulo o Residuo de la división ( % )
+	PRINT1(d, 370 % 500);
+	// PRINT1(d, 1750.0 % 500);   Error!!! no pueden ser flotantes
+
+
+}
+void aditivos() 
+{	
+	//  Jerarquía nivel 4 - Operadores aditivos
+	//  Operador suma ( + ) - Binaria
+	PRINT1(d, 50 + 300);
+
+	//  Operador resta ( - ) - Binaria
+	PRINT1(d, 50 - 300);
+}
+void desplazamiento() 
+{
+	//  Jerarquía nivel 5 - Desplazamiento 
+	//  Operador desplazamiento a la izquierda ( << ) 
+	PRINT1(d, 25 << 1);
+	PRINT1(d, 25 << 2);
+	PRINT1(d, 25 << 3);
+	PRINT1(d, 25 << 5);
+
+	//  Operador desplazamiento a la derecha ( >> ) 
+	PRINT1(d, 800 >> 1);
+	PRINT1(d, 800 >> 2);
+	PRINT1(d, 800 >> 3);
+	PRINT1(d, 800 >> 5);
+
+	PRINT1(d, 25 >> 1);
+}
+void relacionales() 
+{
+	//  Jerarquía nivel 6 - Relacionales
+	PRINT1(d, 5 > 2);
+	PRINT1(d, 5 >= 2);
+	PRINT1(d, 5 < 2);
+	PRINT1(d, 5 <= 2);
+
+	a = 0;
+	PRINT1(d, (!5 > a++) );
+	a = 0;
+	PRINT1(d, (!5 > ++a) );
+	a = 0;
+	PRINT1(d, (!!5 > a++) );
+}
+void igualdad() 
+{
+	//  Jerarquía nivel 7 - Igualdad
+	// Operador Igual que  ( == ) y diferente de ( != )
+	a = 20;
+	b = 30;
+
+	PRINT2(d, a, b);
+	PRINT1(d, a == b);
+	PRINT1(d, a != b);
+
+	PRINT2(d, a, b);
+	PRINT1(d, !a == !b);
+	PRINT1(d, !a++ != !b--);
+}
+int main()
+{
+	//  Jerarquía nivel 8 - Igualdad
 
 	system("pause");
 }
