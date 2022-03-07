@@ -241,9 +241,47 @@ void igualdad()
 	PRINT1(d, !a == !b);
 	PRINT1(d, !a++ != !b--);
 }
+void deBits() 
+{
+	//  Jerarquía nivel 8 - AND de Bits ( & ) - Binaria
+	PRINT1(d, 13 & 19);
+	PRINT1(d, 35 & 18);
+
+	//  Jerarquía nivel 9 - OR de Bits ( | ) 
+	PRINT1(d, 13 | 19);
+	PRINT1(d, 35 | 18);
+
+	//  Jerarquía nivel 10 - XOR de Bits ( ^ ) 
+	PRINT1(d, 13 ^ 19);
+	PRINT1(d, 35 ^ 18);
+
+
+	a = 15; b = 35;
+	PRINT1(d, !a | b++);
+	PRINT2(d, a, b);
+	PRINT1(d, a++ ^ --b);
+}
 int main()
 {
-	//  Jerarquía nivel 8 - Igualdad
+    // Operadores lógicos
+	//  Jerarquía nivel 11 - AND lógico ( && )
+	PRINT1(d, 35 && 15);
+	PRINT1(d, 0 && 15);
+
+	//  Jerarquía nivel 12 - OR lógico ( || )
+	PRINT1(d, 35 || 15);
+	PRINT1(d, 0 || 15);
+
+	a = 5; b = 0; c = 2;
+	PRINT1(d, a && b || c);
+	PRINT1(d, a || b && c);
+	PRINT1(d, a++ && b++ || c++);
+	PRINT3(d, a, b, c);
+
+	a = 0; b = 5; c = 2;
+	PRINT3(d, a, b, c);
+	PRINT1(d, (a++ == 1) && (b++ == 4) || (c++ != 3) );
+	PRINT3(d, a, b, c);
 
 	system("pause");
 }
