@@ -261,9 +261,8 @@ void deBits()
 	PRINT2(d, a, b);
 	PRINT1(d, a++ ^ --b);
 }
-int main()
-{
-    // Operadores lógicos
+void logicos() {
+	// Operadores lógicos
 	//  Jerarquía nivel 11 - AND lógico ( && )
 	PRINT1(d, 35 && 15);
 	PRINT1(d, 0 && 15);
@@ -282,6 +281,64 @@ int main()
 	PRINT3(d, a, b, c);
 	PRINT1(d, (a++ == 1) && (b++ == 4) || (c++ != 3) );
 	PRINT3(d, a, b, c);
+}
+
+void condicional()
+{
+	//  Jerarquía nivel 13 - Condicional ( ?: ) - Ternario
+	// if( condición ) verdadero : falso;  
+	a = 20;
+	b = 10;
+	( a < 10 ) ? PRINT1(d, a) : PRINT1(d, b);
+
+	c = ( a % 2 ) ? a : b;
+	PRINT1(d, c);
+}
+
+void asignacion() 
+{
+	//  Jerarquía nivel 14 - Asignación 
+	//  Asignacion simple ( = ) 
+	a = 10;
+	b = a * 10;
+
+	a = b = c = d = 20;		// Asignación múltiple
+	PRINT4(d, a, b, c, d);
+
+	// Asignación Compuesta ( _= )
+	a = 10;
+	PRINT1(d, a);
+	PRINT1(d, a += 5);
+	PRINT1(d, a -= 5);
+	PRINT1(d, a *= 5);
+	PRINT1(d, a /= 5);
+	PRINT1(d, a %= 7);
+	PRINT1(d, a <<= 5);
+	PRINT1(d, a >>= 5);
+	PRINT1(d, a &= 5);
+	PRINT1(d, a |= 5);
+	PRINT1(d, a ^= 5);
+
+	//  Tres maneras de hacer lo mismo:  Sumar o restar 1
+	PRINT3(d, a = a + 1, a += 1, a++);
+
+	//  Dos maneras de hacer lo mismo:
+	PRINT2(d, a = a + 5, a += 5);
+
+	a = b = c = 2;
+	d = a -= b += c *= 2;
+	PRINT4(d, a, b, c, d);
+}
+void coma() 
+{
+	//  Jerarquía nivel 15 - Coma ( , )
+	int a, b, c, d;
+	printf("%d\n", a);
+}
+int main()
+{
+    
+
 
 	system("pause");
 }
