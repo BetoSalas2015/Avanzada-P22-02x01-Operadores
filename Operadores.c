@@ -337,8 +337,27 @@ void coma()
 }
 int main()
 {
-    
+    //  Ejercicios:
+	a = 3;  b = 3; c = 0; d = -1; e = 3; f = 2;
 
+	PRINT1(d, a*=2*a*++b );
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f);
 
+	PRINT1(d, b=++b+b++);
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f);
+
+	a = 3;  b = 3; c = 0; d = -1; e = 3; f = 2;
+
+	PRINT1(f, e/=d+d++ );
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f);
+	
+	PRINT1(d, d=d?d--:d++ );
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f);
+	
+	a = 3;  b = 3; c = 0; d = -1; e = 3; f = 2;
+	
+	PRINT1(d, !a+!b+(d&&c) );
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f);
+	
 	system("pause");
 }
